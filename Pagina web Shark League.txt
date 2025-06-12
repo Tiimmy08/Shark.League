@@ -1,0 +1,283 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Shark League FC</title>
+  <style>
+    :root {
+      --rojo-oscuro: #8B0000;
+      --amarillo: #FFD700;
+      --blanco: #FFFFFF;
+      --naranja: #FF6A00;
+    }
+    body {
+      margin: 0;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background: var(--rojo-oscuro);
+      color: var(--blanco);
+      display: flex;
+      flex-direction: column;
+      min-height: 100vh;
+      background-image: url('https://i.imgur.com/WFtQ4Vl.jpg');
+      background-size: cover;
+      background-position: center;
+      background-repeat: no-repeat;
+      position: relative;
+    }
+    body::before {
+      content: "";
+      position: fixed;
+      inset: 0;
+      background: rgba(0,0,0,0.65);
+      z-index: -1;
+    }
+    header {
+      background: var(--naranja);
+      padding: 1.2rem;
+      text-align: center;
+      font-weight: 900;
+      font-size: 2.4rem;
+      letter-spacing: 3px;
+      text-transform: uppercase;
+      text-shadow: 1px 1px 3px #660000;
+    }
+    main {
+      flex: 1;
+      padding: 2rem 1rem;
+      max-width: 900px;
+      margin: auto;
+    }
+    h2 {
+      color: var(--amarillo);
+      margin-top: 0;
+      text-align: center;
+      text-transform: uppercase;
+      letter-spacing: 2px;
+    }
+    section {
+      background: #330000cc;
+      border-radius: 12px;
+      padding: 1.5rem 2rem;
+      margin-bottom: 2rem;
+      box-shadow: 0 0 10px #ff7f0022;
+    }
+    p {
+      font-size: 1.1rem;
+      line-height: 1.5;
+      margin: 0.8rem 0;
+    }
+    .torneo-info {
+      font-weight: 700;
+      font-size: 1.2rem;
+      color: var(--amarillo);
+      text-align: center;
+    }
+    .frase-legendaria {
+      color: var(--amarillo);
+      font-style: italic;
+      font-weight: 700;
+      font-size: 1.3rem;
+      text-align: center;
+      margin: 2rem 0 1rem 0;
+      letter-spacing: 1.5px;
+      text-shadow: 1px 1px 3px #660000;
+    }
+    .frase-personal {
+      margin-top: 1.5rem;
+      font-weight: 700;
+      font-size: 1.1rem;
+      font-style: italic;
+      color: var(--blanco);
+      text-align: center;
+      text-shadow: 1px 1px 2px #330000;
+    }
+    footer {
+      background: var(--naranja);
+      text-align: center;
+      padding: 1rem 0.5rem;
+      font-size: 0.9rem;
+      letter-spacing: 1px;
+      color: #330000;
+      font-weight: 700;
+      user-select: none;
+    }
+    a.social-link {
+      color: var(--blanco);
+      text-decoration: none;
+      font-weight: 700;
+      margin: 0 0.6rem;
+      transition: color 0.3s ease;
+      font-size: 1.5rem;
+    }
+    a.social-link:hover {
+      color: var(--amarillo);
+    }
+    .btn-epico {
+      background: var(--naranja);
+      color: var(--blanco);
+      font-weight: 900;
+      padding: 0.75rem 1.8rem;
+      border-radius: 30px;
+      font-size: 1.2rem;
+      box-shadow: 0 0 10px var(--naranja);
+      text-decoration: none;
+      user-select: none;
+      display: inline-block;
+      transition: background 0.3s ease, box-shadow 0.6s ease-in-out;
+      animation: float 3s ease-in-out infinite;
+      cursor: pointer;
+      margin: 0 0.5rem;
+    }
+    .btn-epico:hover {
+      background: #ff8c00;
+      box-shadow: 0 0 20px var(--naranja), 0 0 30px var(--amarillo);
+    }
+    @keyframes float {
+      0%, 100% {
+        transform: translateY(0);
+        box-shadow: 0 0 10px var(--naranja);
+      }
+      50% {
+        transform: translateY(-6px);
+        box-shadow: 0 0 20px var(--amarillo);
+      }
+    }
+    .contador {
+      text-align: center;
+      font-size: 2.2rem;
+      font-weight: 900;
+      color: var(--amarillo);
+      text-shadow: 1px 1px 3px #660000;
+      margin-bottom: 1.5rem;
+      user-select: none;
+    }
+    @media (max-width: 480px) {
+      header {
+        font-size: 1.8rem;
+        letter-spacing: 1.5px;
+      }
+      main {
+        padding: 1rem 1rem;
+      }
+      section {
+        padding: 1rem 1.2rem;
+      }
+      .contador {
+        font-size: 1.6rem;
+      }
+      a.social-link {
+        font-size: 1.3rem;
+        margin: 0 0.3rem;
+      }
+      .btn-epico {
+        padding: 0.5rem 1rem;
+        font-size: 1rem;
+        margin: 0 0.3rem;
+      }
+    }
+  </style>
+</head>
+<body>
+
+<header>SHARK LEAGUE FC</header>
+
+<main>
+  <section>
+    <h2>Sobre la Shark League FC</h2>
+    <p>¡Hola! Soy Tiimmy, organizador apasionado del torneo Shark League FC. Nuestra liga de fútbol consola FC25 es un desafío donde la estrategia, la resistencia y el espíritu competitivo se enfrentan en un solo día lleno de adrenalina y emoción.</p>
+    <p class="frase-personal">
+      Este torneo es el primer gran evento que organizo y quiero que quede grabado como un torneo sólido y memorable para todos los jugadores y fanáticos.
+    </p>
+  </section>
+
+  <section>
+    <h2>Detalles del Torneo</h2>
+    <p class="torneo-info">
+      📅 Fecha: 24 de junio<br />
+      🕝 Llegada: 2:30 p.m.<br />
+      ⏰ Inicio del torneo: 3:00 p.m.<br />
+      💰 Inscripción: $10.000<br />
+      📍 Lugar: Privado<br />
+      ⚽ Cupos limitados<br />
+    </p>
+    <p class="frase-legendaria">
+      La Shark League no se gana… se sobrevive.<br />
+      Prepárate para darlo todo y ser leyenda.
+    </p>
+
+    <div class="contador" id="contador">
+      Cargando contador...
+    </div>
+  </section>
+
+  <section>
+    <h2 style="
+      color: var(--amarillo); 
+      text-transform: uppercase; 
+      font-weight: 900; 
+      text-align: center; 
+      letter-spacing: 3px; 
+      text-shadow: 2px 2px 5px #660000;
+      font-size: 2.4rem;
+      margin-bottom: 1rem;
+      white-space: nowrap;
+      overflow-x: auto;
+    ">
+      ⚽️ ÚNETE A LA LEYENDA ⚽️
+    </h2>
+    <p style="text-align:center; font-weight: 700; font-size: 1.3rem; margin-bottom: 1rem; color: var(--amarillo); text-shadow: 1px 1px 3px #660000;">
+      En la Shark LEAGUE solo los valientes dejan su marca<br />
+      Conéctate y sé parte de la historia 🦈
+    </p>
+    <div style="text-align:center; margin-bottom: 1.2rem;">
+      <a href="https://www.instagram.com/tiimmy_0_8" target="_blank" rel="noopener noreferrer" 
+         class="btn-epico social-link"
+         aria-label="Visitar Instagram Shark League FC">
+        Instagram
+      </a>
+      <a href="https://wa.me/56964728750?text=Hola%20Tiimmy%20estoy%20listo%20para%20sobrevivir%20y%20dejar%20mi%20huella%20en%20la%20shark%20LEAGUE" 
+         target="_blank" 
+         class="btn-epico social-link" 
+         rel="noopener noreferrer"
+         aria-label="Contactar por WhatsApp para inscripción">
+        WhatsApp
+      </a>
+    </div>
+  </section>
+</main>
+
+<footer>
+  &copy; 2025 Tiimmy - Shark League FC. Todos los derechos reservados.
+</footer>
+
+<script>
+  // Fecha del torneo: 24 de junio de 2025, 15:00 horas
+  const fechaTorneo = new Date("2025-06-24T15:00:00");
+  const contadorElemento = document.getElementById("contador");
+
+  function actualizarContador() {
+    const ahora = new Date();
+    const diferencia = fechaTorneo - ahora;
+
+    if (diferencia <= 0) {
+      contadorElemento.innerHTML = "¡La Shark League ha comenzado!";
+      clearInterval(intervalo);
+      return;
+    }
+
+    const dias = Math.floor(diferencia / (1000 * 60 * 60 * 24));
+    const horas = Math.floor((diferencia / (1000 * 60 * 60)) % 24);
+    const minutos = Math.floor((diferencia / (1000 * 60)) % 60);
+    const segundos = Math.floor((diferencia / 1000) % 60);
+
+    contadorElemento.innerHTML = 
+      `Faltan <strong>${dias}</strong> días, <strong>${horas}</strong>h <strong>${minutos}</strong>m <strong>${segundos}</strong>s`;
+  }
+
+  actualizarContador();
+  const intervalo = setInterval(actualizarContador, 1000);
+</script>
+
+</body>
+</html>
